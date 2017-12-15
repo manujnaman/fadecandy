@@ -43,5 +43,6 @@ public:
         float size = 1.5 + 0.8 * sinf(angle3);
 
         rgb = dot.sample( (plane - position) / size + center );
+        rgb *= 0.25f; 
     }
 };

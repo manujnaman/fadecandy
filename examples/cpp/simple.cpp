@@ -17,6 +17,7 @@ public:
 
     virtual void beginFrame(const FrameInfo &f)
     {
+        printf("begin_frame\n");
         const float speed = 10.0;
         cycle = fmodf(cycle + f.timeDelta * speed, 2 * M_PI);
     }
@@ -37,8 +38,8 @@ int main(int argc, char **argv)
     r.setEffect(&e);
 
     // Defaults, overridable with command line options
-    r.setMaxFrameRate(100);
-    r.setLayout("../layouts/grid32x16z.json");
+    r.setMaxFrameRate(10);
+    r.setLayout("../layouts/grid8x8.json");
 
     return r.main(argc, argv);
 }

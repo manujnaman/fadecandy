@@ -9,7 +9,8 @@ int main(int argc, char **argv)
     r.setEffect(&e);
 
     // Defaults, overridable with command line options
-    r.setLayout("../layouts/grid32x16z.json");
+    r.setMaxFrameRate(10);
+    r.setLayout("../layouts/grid8x8.json");
 
     return r.main(argc, argv);
 }
